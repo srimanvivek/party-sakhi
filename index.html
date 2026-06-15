@@ -384,7 +384,9 @@ margin:15px auto;
 </style>
 </head>
 <body>
-
+<audio id="bgMusic" loop>
+  <source src="song.mp3" type="audio/mp3">
+</audio>
 <div class="floating" style="left:5%;animation-delay:0s;">💖</div>
 <div class="floating" style="left:15%;animation-delay:2s;">✨</div>
 <div class="floating" style="left:30%;animation-delay:5s;">🍕</div>
@@ -639,6 +641,22 @@ document.body.style.background=
 
 launchConfetti();
 
+/* 🎵 MUSIC START + FADE IN */
+const music = document.getElementById("bgMusic");
+music.volume = 0;
+music.play();
+
+let vol = 0;
+const fade = setInterval(()=>{
+  if(vol < 1){
+    vol += 0.05;
+    music.volume = vol;
+  } else {
+    clearInterval(fade);
+  }
+}, 150);
+
+/* scroll */
 window.scrollTo({
 top:document.body.scrollHeight,
 behavior:'smooth'
