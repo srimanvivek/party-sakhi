@@ -8,6 +8,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
+  .video-card{
+    max-width:800px;
+    margin:auto;
+    overflow:hidden;
+    border-radius:25px;
+    background:rgba(255,255,255,.25);
+    backdrop-filter:blur(15px);
+    padding:15px;
+}
+
+.video-card video{
+    width:100%;
+    border-radius:20px;
+    display:block;
+}
+
+.video-caption{
+    text-align:center;
+    padding:15px;
+    font-weight:600;
+    font-size:1.1rem;
+}
 *{
 margin:0;
 padding:0;
@@ -411,7 +434,21 @@ How can someone look this good and still not give a treat?
 
 </div>
 </section>
+<section class="section glass">
+    <h2 class="section-title">🎬 Official Evidence Video</h2>
 
+    <div class="video-card">
+        <video controls poster="thumbnail.jpg">
+            <source src="trashed-1776695848-VID_20260309_220128_363.mp4" type="video/mp4">
+            Your browser does not support video playback.
+        </video>
+
+        <div class="video-caption">
+            Rare footage of Jhumri successfully avoiding treat discussions for the 847th time.
+        </div>
+    </div>
+</section>
+  
 <section class="section glass">
 <h2 class="section-title">🧠 Friend Analysis Report</h2>
 
